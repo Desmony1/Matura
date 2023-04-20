@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dijkstra
 {
+    [Serializable]
     internal class Node
     {
         public int Id { set; get; }
@@ -14,7 +15,7 @@ namespace Dijkstra
         public int Y { set; get; }
         public bool Marked { set; get; }
 
-        private List<Node> neighbours = new List<Node>();
+        public List<Node> neighbours = new List<Node>();
 
         public Node(int id, int x, int y)
         {
@@ -22,7 +23,7 @@ namespace Dijkstra
             X = x;
             Y = y;
         }
-
+        
         public const int SIZE = 20;
         private readonly Font FONT = new Font("Arial", 10);
 
@@ -43,7 +44,13 @@ namespace Dijkstra
 
         public void PaintNeighbours(Graphics g)
         {
-            neighbours.ForEach(node => g.DrawLine(Pens.Black, X, Y, node.X, node.Y));
+            neighbours.ForEach(node => {
+                Pen pen = Pens.Black;
+                if (Marked && node.Marked)
+                    pen = Pens.Red;
+                g.DrawLine(pen, X, Y, node.X, node.Y);
+            }
+            );
         }
         public bool InNode(int x, int y, int size = 0)
         {
@@ -54,7 +61,13 @@ namespace Dijkstra
 
         public void AddNeighbour(Node n)
         {
-            neighbours.Add(n);
+            if(n != this)
+                neighbours.Add(n);
+        }
+
+        public void RemoveFromNeighbours()
+        {
+            neighbours.ForEach(node => node.neighbours.Remove(this));
         }
 
         public bool ContainsNeighbour(Node n)
@@ -67,5 +80,6 @@ namespace Dijkstra
             X = x;
             Y = y;
         }
+
     }
 }

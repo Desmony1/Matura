@@ -20,19 +20,27 @@ namespace Dijkstra
             openDictionary.Add(entry.n, entry);
         }
 
-        public void Sort()
-        {
-            openList.Sort((e1, e2) => e1.distance.CompareTo(e2.distance));
-        }
-
         public ListEntry GetBest()
         {
             if (openList.Count == 0)
                 return null;
+            openList.Sort((e1, e2) => e1.distance.CompareTo(e2.distance));
             ListEntry best = openList[0];
             openList.RemoveAt(0);
             openDictionary.Remove(best.n);
             return best;
+        }
+
+        public ListEntry Get(Node n)
+        {
+            if (IsInOpen(n))
+                return openDictionary[n];
+            return null;
+        }
+
+        public bool IsInOpen(Node n)
+        {
+            return openDictionary.ContainsKey(n);
         }
     }
 }

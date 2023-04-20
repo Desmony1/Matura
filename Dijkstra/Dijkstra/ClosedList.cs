@@ -14,13 +14,28 @@ namespace Dijkstra
         {
             if (closedDictionary.ContainsKey(entry.n))
                 return;
-
+            if(entry.predecessor != null)
+                Console.WriteLine("Knoten: " + entry.n.Id + "; Vorrgänger: " + entry.predecessor.Id);
             closedDictionary.Add(entry.n, entry);
         }
 
-        public List<Node> GetPath()
+        public List<Node> GetPath(Node endNode)
         {
-            return closedDictionary.Keys.ToList();
+           ListEntry tmp = closedDictionary[endNode];
+           List<Node> result = new List<Node>();
+            while (true)
+            {
+                result.Add(tmp.n);
+                if (tmp.predecessor == null)
+                    break;
+                tmp = closedDictionary[tmp.predecessor];
+            }
+            return result;
+        }
+
+        public bool IsInClosed(Node n)
+        {
+            return closedDictionary.ContainsKey(n);
         }
     }
 }
