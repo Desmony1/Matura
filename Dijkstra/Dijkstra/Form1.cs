@@ -7,8 +7,9 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Dijkstra
 {
@@ -16,9 +17,11 @@ namespace Dijkstra
     {
         public FMain()
         {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de");
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
         }
 
         private NodeManagement nm = new NodeManagement();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMain));
             this.CMSmain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MIstart = new System.Windows.Forms.ToolStripMenuItem();
             this.MIend = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +50,7 @@
             // 
             // CMSmain
             // 
+            resources.ApplyResources(this.CMSmain, "CMSmain");
             this.CMSmain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.CMSmain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MIstart,
@@ -57,54 +59,47 @@
             this.MIdelete,
             this.MIprint});
             this.CMSmain.Name = "CMSmain";
-            this.CMSmain.Size = new System.Drawing.Size(177, 106);
             // 
             // MIstart
             // 
+            resources.ApplyResources(this.MIstart, "MIstart");
             this.MIstart.Name = "MIstart";
-            this.MIstart.Size = new System.Drawing.Size(176, 24);
-            this.MIstart.Text = "Startknoten";
             this.MIstart.Click += new System.EventHandler(this.MIstart_Click);
             // 
             // MIend
             // 
+            resources.ApplyResources(this.MIend, "MIend");
             this.MIend.Name = "MIend";
-            this.MIend.Size = new System.Drawing.Size(176, 24);
-            this.MIend.Text = "Endknoten";
             this.MIend.Click += new System.EventHandler(this.MIend_Click);
             // 
             // toolStripMenuItem1
             // 
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(173, 6);
             // 
             // MIdelete
             // 
+            resources.ApplyResources(this.MIdelete, "MIdelete");
             this.MIdelete.Name = "MIdelete";
-            this.MIdelete.Size = new System.Drawing.Size(176, 24);
-            this.MIdelete.Text = "Löschen";
             this.MIdelete.Click += new System.EventHandler(this.MIdelete_Click);
             // 
             // MIprint
             // 
+            resources.ApplyResources(this.MIprint, "MIprint");
             this.MIprint.Name = "MIprint";
-            this.MIprint.Size = new System.Drawing.Size(176, 24);
-            this.MIprint.Text = "Print Nachbarn";
             this.MIprint.Click += new System.EventHandler(this.MIprint_Click);
             // 
             // MSmain
             // 
+            resources.ApplyResources(this.MSmain, "MSmain");
             this.MSmain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MSmain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MIFile});
-            this.MSmain.Location = new System.Drawing.Point(0, 0);
             this.MSmain.Name = "MSmain";
-            this.MSmain.Size = new System.Drawing.Size(800, 28);
-            this.MSmain.TabIndex = 1;
-            this.MSmain.Text = "menuStrip1";
             // 
             // MIFile
             // 
+            resources.ApplyResources(this.MIFile, "MIFile");
             this.MIFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MINew,
             this.toolStripMenuItem2,
@@ -113,57 +108,49 @@
             this.toolStripMenuItem3,
             this.MIExit});
             this.MIFile.Name = "MIFile";
-            this.MIFile.Size = new System.Drawing.Size(59, 24);
-            this.MIFile.Text = "Datei";
             // 
             // MINew
             // 
+            resources.ApplyResources(this.MINew, "MINew");
             this.MINew.Name = "MINew";
-            this.MINew.Size = new System.Drawing.Size(224, 26);
-            this.MINew.Text = "Neu";
             this.MINew.Click += new System.EventHandler(this.MINew_Click);
             // 
             // toolStripMenuItem2
             // 
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(221, 6);
             // 
             // MIOpen
             // 
+            resources.ApplyResources(this.MIOpen, "MIOpen");
             this.MIOpen.Name = "MIOpen";
-            this.MIOpen.Size = new System.Drawing.Size(224, 26);
-            this.MIOpen.Text = "Öffnen";
             this.MIOpen.Click += new System.EventHandler(this.MIOpen_Click);
             // 
             // MISave
             // 
+            resources.ApplyResources(this.MISave, "MISave");
             this.MISave.Name = "MISave";
-            this.MISave.Size = new System.Drawing.Size(224, 26);
-            this.MISave.Text = "Speichern unter";
             this.MISave.Click += new System.EventHandler(this.MISave_Click);
             // 
             // toolStripMenuItem3
             // 
+            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(221, 6);
             // 
             // MIExit
             // 
+            resources.ApplyResources(this.MIExit, "MIExit");
             this.MIExit.Name = "MIExit";
-            this.MIExit.Size = new System.Drawing.Size(224, 26);
-            this.MIExit.Text = "Beenden";
             this.MIExit.Click += new System.EventHandler(this.MIExit_Click);
             // 
             // FMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MSmain);
             this.MainMenuStrip = this.MSmain;
             this.Name = "FMain";
-            this.Text = "Dijkstra";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FMain_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FMain_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FMain_MouseMove);

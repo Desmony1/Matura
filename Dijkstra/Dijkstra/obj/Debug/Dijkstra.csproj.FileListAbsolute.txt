@@ -9,3 +9,9 @@ D:\Daten\Matura\Dijkstra\Dijkstra\obj\Debug\Dijkstra.csproj.GenerateResource.cac
 D:\Daten\Matura\Dijkstra\Dijkstra\obj\Debug\Dijkstra.csproj.CoreCompileInputs.cache
 D:\Daten\Matura\Dijkstra\Dijkstra\obj\Debug\Dijkstra.exe
 D:\Daten\Matura\Dijkstra\Dijkstra\obj\Debug\Dijkstra.pdb
+D:\Daten\Matura\Dijkstra\Dijkstra\bin\Debug\aa\Dijkstra.resources.dll
+D:\Daten\Matura\Dijkstra\Dijkstra\bin\Debug\en\Dijkstra.resources.dll
+D:\Daten\Matura\Dijkstra\Dijkstra\obj\Debug\Dijkstra.FMain.aa.resources
+D:\Daten\Matura\Dijkstra\Dijkstra\obj\Debug\Dijkstra.FMain.en.resources
+D:\Daten\Matura\Dijkstra\Dijkstra\obj\Debug\aa\Dijkstra.resources.dll
+D:\Daten\Matura\Dijkstra\Dijkstra\obj\Debug\en\Dijkstra.resources.dll
