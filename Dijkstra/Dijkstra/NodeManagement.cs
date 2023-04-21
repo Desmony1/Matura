@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,10 @@ namespace Dijkstra
             {
                 if (startNode != null)
                 {
-                    startNode.Marked = false;
+                    startNode.Color = Color.Black;
                 }
                 startNode = value;
-                startNode.Marked = true;
+                startNode.Color = Color.Red;
             }
            
         }
@@ -35,10 +36,10 @@ namespace Dijkstra
             {
                 if (endNode != null)
                 {
-                    endNode.Marked = false;
+                    endNode.Color = Color.Black;
                 }
                 endNode = value;
-                endNode.Marked = true;
+                endNode.Color = Color.Red;
             }
             get
             {
@@ -48,7 +49,7 @@ namespace Dijkstra
 
         public void AddNode(int x, int y)
         {
-            nodes.Add(new Node(++counter, x, y));
+            nodes.Add(new Node(++counter, x, y, Color.Black));
         }
 
         public void PaintNodes(Graphics g)
@@ -97,7 +98,7 @@ namespace Dijkstra
 
         public void ResetMarked()
         {
-            nodes.ForEach(node => node.Marked = false);
+            nodes.ForEach(node => node.Color = Color.Black);
         }
 
         public void Search()
@@ -141,8 +142,8 @@ namespace Dijkstra
                 closedList.AddEntry(entry);
             else
             {
-                StartNode.Marked = true;
-                EndNode.Marked = true;
+                StartNode.Color = Color.Red;
+                EndNode.Color = Color.Red;
                 return;
             }
 
@@ -150,9 +151,76 @@ namespace Dijkstra
             List<Node> nodelist = closedList.GetPath(EndNode);
 
             nodelist.ForEach(node => Console.Write(node.Id+"->"));
-            nodelist.ForEach(node => node.Marked = true);
+            nodelist.ForEach(node => node.Color = Color.Red);
         }
 
+        public void SearchAnimation(Object f)
+        {
+            if (StartNode == null || EndNode == null)
+                return;
 
+
+            FMain frame = (FMain)f;
+            Console.WriteLine("Animation");
+            ResetMarked();
+            OpenList openList = new OpenList();
+            ClosedList closedList = new ClosedList();
+
+            StartNode.Color = Color.Blue;
+            EndNode.Color = Color.Blue;
+
+            ListEntry entry = new ListEntry(StartNode, 0, null);
+
+            while (entry != null)
+            {
+                if(entry.n != StartNode)
+                    entry.n.Color = Color.Orange;
+                frame.Invalidate();
+                Thread.Sleep(2000);
+                if (entry.n == EndNode)
+                    break;
+                entry.n.neighbours.ForEach(node =>
+                {
+                    if (closedList.IsInClosed(node))
+                    {
+
+                    }
+                    else if (!openList.IsInOpen(node))
+                    {
+                        openList.AddEntry(new ListEntry(node, entry.distance + 1, entry.n));
+                    }
+                    else
+                    {
+                        ListEntry entry2 = openList.Get(node);
+                        if (entry2.distance > entry.distance)
+                        {
+                            entry2.distance = entry.distance + 1;
+                            entry2.predecessor = entry.n;
+                        }
+                    }
+                });
+                closedList.AddEntry(entry);
+                entry = openList.GetBest();
+
+            }
+            if (entry != null)
+            {
+                closedList.AddEntry(entry);
+            }
+            else
+            {
+                StartNode.Color = Color.Red;
+                EndNode.Color = Color.Red;
+                return;
+            }
+
+
+            List<Node> nodelist = closedList.GetPath(EndNode);
+
+            ResetMarked();
+            nodelist.ForEach(node => Console.Write(node.Id + "->"));
+            nodelist.ForEach(node => node.Color = Color.Red);
+            frame.Invalidate();
+        }
     }
 }

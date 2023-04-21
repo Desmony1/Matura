@@ -35,7 +35,10 @@
             this.MIend = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.MIdelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.MIprint = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.MIDebugging = new System.Windows.Forms.ToolStripMenuItem();
+            this.MIPrint = new System.Windows.Forms.ToolStripMenuItem();
+            this.MIAnimation = new System.Windows.Forms.ToolStripMenuItem();
             this.MSmain = new System.Windows.Forms.MenuStrip();
             this.MIFile = new System.Windows.Forms.ToolStripMenuItem();
             this.MINew = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +60,8 @@
             this.MIend,
             this.toolStripMenuItem1,
             this.MIdelete,
-            this.MIprint});
+            this.toolStripMenuItem4,
+            this.MIDebugging});
             this.CMSmain.Name = "CMSmain";
             // 
             // MIstart
@@ -83,11 +87,30 @@
             this.MIdelete.Name = "MIdelete";
             this.MIdelete.Click += new System.EventHandler(this.MIdelete_Click);
             // 
-            // MIprint
+            // toolStripMenuItem4
             // 
-            resources.ApplyResources(this.MIprint, "MIprint");
-            this.MIprint.Name = "MIprint";
-            this.MIprint.Click += new System.EventHandler(this.MIprint_Click);
+            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            // 
+            // MIDebugging
+            // 
+            resources.ApplyResources(this.MIDebugging, "MIDebugging");
+            this.MIDebugging.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MIPrint,
+            this.MIAnimation});
+            this.MIDebugging.Name = "MIDebugging";
+            // 
+            // MIPrint
+            // 
+            resources.ApplyResources(this.MIPrint, "MIPrint");
+            this.MIPrint.Name = "MIPrint";
+            this.MIPrint.Click += new System.EventHandler(this.MIPrint_Click);
+            // 
+            // MIAnimation
+            // 
+            resources.ApplyResources(this.MIAnimation, "MIAnimation");
+            this.MIAnimation.Name = "MIAnimation";
+            this.MIAnimation.Click += new System.EventHandler(this.MIAnimation_Click);
             // 
             // MSmain
             // 
@@ -96,6 +119,7 @@
             this.MSmain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MIFile});
             this.MSmain.Name = "MSmain";
+            this.MSmain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MSmain_ItemClicked);
             // 
             // MIFile
             // 
@@ -151,6 +175,7 @@
             this.Controls.Add(this.MSmain);
             this.MainMenuStrip = this.MSmain;
             this.Name = "FMain";
+            this.Load += new System.EventHandler(this.FMain_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FMain_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FMain_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FMain_MouseMove);
@@ -170,7 +195,6 @@
         private System.Windows.Forms.ToolStripMenuItem MIend;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem MIdelete;
-        private System.Windows.Forms.ToolStripMenuItem MIprint;
         private System.Windows.Forms.MenuStrip MSmain;
         private System.Windows.Forms.ToolStripMenuItem MIFile;
         private System.Windows.Forms.ToolStripMenuItem MINew;
@@ -179,6 +203,10 @@
         private System.Windows.Forms.ToolStripMenuItem MISave;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem MIExit;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem MIDebugging;
+        private System.Windows.Forms.ToolStripMenuItem MIPrint;
+        private System.Windows.Forms.ToolStripMenuItem MIAnimation;
     }
 }
 

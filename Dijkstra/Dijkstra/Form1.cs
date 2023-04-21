@@ -17,7 +17,7 @@ namespace Dijkstra
     {
         public FMain()
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de");
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -103,16 +103,6 @@ namespace Dijkstra
             Refresh();
         }
 
-        private void MIprint_Click(object sender, EventArgs e)
-        {
-            if(ctxNode != null)
-            {
-                Console.Write("(");
-                ctxNode.neighbours.ForEach(node => Console.Write(node.Id + ";"));
-                Console.Write(")");
-            }
-        }
-
         private void MIExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -150,6 +140,32 @@ namespace Dijkstra
                 bf.Serialize(fs, nm);
             }
 
+        }
+
+        private void FMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MIPrint_Click(object sender, EventArgs e)
+        {
+            if (ctxNode != null)
+            {
+                Console.Write("(");
+                ctxNode.neighbours.ForEach(node => Console.Write(node.Id + ";"));
+                Console.Write(")");
+            }
+        }
+
+        private void MSmain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void MIAnimation_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ParameterizedThreadStart(nm.SearchAnimation));
+            t.Start(this);
         }
 
         private void FMain_MouseDown(object sender, MouseEventArgs e)

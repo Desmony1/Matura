@@ -13,15 +13,16 @@ namespace Dijkstra
         public int Id { set; get; }
         public int X { set; get; }
         public int Y { set; get; }
-        public bool Marked { set; get; }
+        public Color Color { set; get; }
 
         public List<Node> neighbours = new List<Node>();
 
-        public Node(int id, int x, int y)
+        public Node(int id, int x, int y, Color c)
         {
             Id = id;
             X = x;
             Y = y;
+            Color = c;
         }
         
         public const int SIZE = 20;
@@ -29,13 +30,8 @@ namespace Dijkstra
 
         public void PaintNode(Graphics g)
         {
-            Pen pen = Pens.Black;
-            Brush brush = Brushes.Black;
-            if (Marked)
-            {
-                pen = Pens.Red;
-                brush = Brushes.Red;
-            }
+            Pen pen = new Pen(Color);
+            Brush brush = new SolidBrush(Color);
             g.FillEllipse(Brushes.White, X - SIZE, Y - SIZE, SIZE * 2, SIZE * 2);
             g.DrawEllipse(pen, X-SIZE, Y-SIZE, SIZE * 2, SIZE * 2);
             SizeF size = g.MeasureString(Id.ToString(), FONT);
@@ -45,10 +41,10 @@ namespace Dijkstra
         public void PaintNeighbours(Graphics g)
         {
             neighbours.ForEach(node => {
-                Pen pen = Pens.Black;
-                if (Marked && node.Marked)
-                    pen = Pens.Red;
-                g.DrawLine(pen, X, Y, node.X, node.Y);
+                if(node.Color != Color.Black && this.Color != Color.Black && node.Color != Color.Orange && node.Color != Color.Blue)
+                    g.DrawLine(new Pen(this.Color), X, Y, node.X, node.Y);
+                else
+                    g.DrawLine(new Pen(Color.Black), X, Y, node.X, node.Y);
             }
             );
         }

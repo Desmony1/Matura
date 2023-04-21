@@ -117,69 +117,123 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MSmain.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
   <data name="MIFile.Text" xml:space="preserve">
     <value>Datei</value>
   </data>
+  <data name="&gt;&gt;MSmain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;CMSmain.Name" xml:space="preserve">
+    <value>CMSmain</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <data name="MINew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="MIOpen.Text" xml:space="preserve">
-    <value>Öffnen</value>
+  <data name="MISave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;MIprint.Type" xml:space="preserve">
+  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 6</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem3.Name" xml:space="preserve">
+    <value>toolStripMenuItem3</value>
+  </data>
+  <data name="MIExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FMain</value>
+  </data>
+  <data name="&gt;&gt;MIend.Name" xml:space="preserve">
+    <value>MIend</value>
+  </data>
+  <data name="&gt;&gt;MSmain.Name" xml:space="preserve">
+    <value>MSmain</value>
+  </data>
+  <data name="&gt;&gt;CMSmain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MIOpen.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MISave.Type" xml:space="preserve">
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="MSmain.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="CMSmain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 106</value>
+  </data>
+  <data name="&gt;&gt;MIFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 6</value>
+  </data>
+  <data name="MIend.Text" xml:space="preserve">
+    <value>Endknoten</value>
+  </data>
+  <data name="MINew.Text" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="MSmain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;MIPrint.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MIstart.Name" xml:space="preserve">
     <value>MIstart</value>
   </data>
-  <data name="MIstart.Text" xml:space="preserve">
-    <value>Startknoten</value>
+  <data name="&gt;&gt;MISave.Name" xml:space="preserve">
+    <value>MISave</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
-    <value>toolStripMenuItem2</value>
+  <data name="MSmain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 28</value>
   </data>
-  <data name="&gt;&gt;MIExit.Name" xml:space="preserve">
-    <value>MIExit</value>
+  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MIAnimation.Name" xml:space="preserve">
+    <value>MIAnimation</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 6</value>
+  </data>
+  <data name="&gt;&gt;MIDebugging.Name" xml:space="preserve">
+    <value>MIDebugging</value>
+  </data>
+  <data name="MIPrint.Text" xml:space="preserve">
+    <value>Print Nachbarn</value>
   </data>
   <data name="&gt;&gt;MSmain.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MIprint.Name" xml:space="preserve">
-    <value>MIprint</value>
-  </data>
-  <data name="MINew.Text" xml:space="preserve">
-    <value>Neu</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MIOpen.Type" xml:space="preserve">
+  <data name="&gt;&gt;MIExit.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MIprint.Text" xml:space="preserve">
-    <value>Print Nachbarn</value>
+  <data name="&gt;&gt;MIdelete.Name" xml:space="preserve">
+    <value>MIdelete</value>
+  </data>
+  <data name="&gt;&gt;MIFile.Name" xml:space="preserve">
+    <value>MIFile</value>
   </data>
   <data name="MIend.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 24</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Dijkstra</value>
+  <data name="MIExit.Text" xml:space="preserve">
+    <value>Beenden</value>
   </data>
-  <data name="&gt;&gt;MSmain.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;MIend.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MINew.Name" xml:space="preserve">
-    <value>MINew</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FMain</value>
+  <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="MIdelete.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 24</value>
@@ -187,114 +241,32 @@
   <data name="MIOpen.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
   </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+  <data name="MIDebugging.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
   </data>
-  <data name="&gt;&gt;MIend.Name" xml:space="preserve">
-    <value>MIend</value>
-  </data>
-  <data name="&gt;&gt;MIFile.Name" xml:space="preserve">
-    <value>MIFile</value>
-  </data>
-  <data name="&gt;&gt;MIOpen.Name" xml:space="preserve">
-    <value>MIOpen</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MISave.Text" xml:space="preserve">
-    <value>Speichern unter</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MSmain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="MIend.Text" xml:space="preserve">
-    <value>Endknoten</value>
-  </data>
-  <data name="MISave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="&gt;&gt;MIdelete.Name" xml:space="preserve">
-    <value>MIdelete</value>
-  </data>
-  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 24</value>
-  </data>
-  <data name="&gt;&gt;MIFile.Type" xml:space="preserve">
+  <data name="&gt;&gt;MINew.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="MIdelete.Text" xml:space="preserve">
     <value>Löschen</value>
   </data>
-  <data name="MSmain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 28</value>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MIExit.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MIAnimation.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;MIExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripMenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MIstart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 24</value>
+  <data name="MIstart.Text" xml:space="preserve">
+    <value>Startknoten</value>
   </data>
-  <data name="MINew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+  <data name="&gt;&gt;MSmain.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;MINew.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MIprint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 24</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem3.Name" xml:space="preserve">
-    <value>toolStripMenuItem3</value>
-  </data>
-  <data name="&gt;&gt;MSmain.Name" xml:space="preserve">
-    <value>MSmain</value>
-  </data>
-  <data name="MIExit.Text" xml:space="preserve">
-    <value>Beenden</value>
-  </data>
-  <data name="MSmain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;MIend.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MISave.Name" xml:space="preserve">
-    <value>MISave</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CMSmain.Name" xml:space="preserve">
-    <value>CMSmain</value>
-  </data>
-  <data name="&gt;&gt;CMSmain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MIdelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 6</value>
-  </data>
-  <data name="CMSmain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 106</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MSmain.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;MIPrint.Name" xml:space="preserve">
+    <value>MIPrint</value>
   </data>
   <data name="&gt;&gt;MIstart.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -302,16 +274,77 @@
   <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
     <value>toolStripMenuItem1</value>
   </data>
+  <data name="&gt;&gt;MIAnimation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Name" xml:space="preserve">
+    <value>toolStripMenuItem4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Dijkstra</value>
+  </data>
+  <data name="MIDebugging.Text" xml:space="preserve">
+    <value>Debugging</value>
+  </data>
+  <data name="&gt;&gt;MIDebugging.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MSmain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MIstart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 24</value>
+  </data>
+  <data name="&gt;&gt;MISave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MIAnimation.Text" xml:space="preserve">
+    <value>Such-Animation</value>
+  </data>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 6</value>
+  </data>
+  <data name="MIOpen.Text" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="MISave.Text" xml:space="preserve">
+    <value>Speichern unter</value>
+  </data>
+  <data name="&gt;&gt;MIOpen.Name" xml:space="preserve">
+    <value>MIOpen</value>
+  </data>
+  <data name="&gt;&gt;MINew.Name" xml:space="preserve">
+    <value>MINew</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="&gt;&gt;MIdelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MIExit.Name" xml:space="preserve">
+    <value>MIExit</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="MIPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
   <metadata name="CMSmain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="MSmain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>139, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>en</value>
+  </metadata>
+  <metadata name="MSmain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>139, 17</value>
   </metadata>
 </root>

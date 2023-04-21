@@ -14,8 +14,6 @@ namespace Dijkstra
         {
             if (closedDictionary.ContainsKey(entry.n))
                 return;
-            if(entry.predecessor != null)
-                Console.WriteLine("Knoten: " + entry.n.Id + "; Vorrgänger: " + entry.predecessor.Id);
             closedDictionary.Add(entry.n, entry);
         }
 

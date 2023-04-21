@@ -117,38 +117,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MIdelete.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="MIend.Text" xml:space="preserve">
-    <value>Endnode</value>
-  </data>
-  <data name="MIExit.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 26</value>
-  </data>
-  <data name="MIFile.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="MINew.Text" xml:space="preserve">
-    <value>New</value>
-  </data>
-  <data name="MIOpen.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="MIprint.Text" xml:space="preserve">
-    <value>Print Neighbours</value>
-  </data>
-  <data name="MISave.Text" xml:space="preserve">
-    <value>Save as</value>
+  <data name="MIstart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
   </data>
   <data name="MIstart.Text" xml:space="preserve">
     <value>Startnode</value>
   </data>
-  <data name="MSmain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 30</value>
+  <data name="MIend.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
+  </data>
+  <data name="MIend.Text" xml:space="preserve">
+    <value>Endnode</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 6</value>
+  </data>
+  <data name="MIdelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
+  </data>
+  <data name="MIdelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MIPrint.Text" xml:space="preserve">
+    <value>Print Neighbours</value>
+  </data>
+  <data name="MIAnimation.Text" xml:space="preserve">
+    <value>Search Animation</value>
+  </data>
+  <data name="CMSmain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 140</value>
+  </data>
+  <data name="MINew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 26</value>
+  </data>
+  <data name="MINew.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 6</value>
+  </data>
+  <data name="MIOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 26</value>
+  </data>
+  <data name="MIOpen.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="MISave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 26</value>
+  </data>
+  <data name="MISave.Text" xml:space="preserve">
+    <value>Save as</value>
+  </data>
+  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 6</value>
+  </data>
+  <data name="MIExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 26</value>
+  </data>
+  <data name="MIExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 24</value>
+  </data>
+  <data name="MIFile.Text" xml:space="preserve">
+    <value>File</value>
   </data>
 </root>
