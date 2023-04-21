@@ -47,6 +47,9 @@
             this.MISave = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.MIExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.MILanguage = new System.Windows.Forms.ToolStripMenuItem();
+            this.MIGerman = new System.Windows.Forms.ToolStripMenuItem();
+            this.MIEnglish = new System.Windows.Forms.ToolStripMenuItem();
             this.CMSmain.SuspendLayout();
             this.MSmain.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +133,8 @@
             this.MIOpen,
             this.MISave,
             this.toolStripMenuItem3,
-            this.MIExit});
+            this.MIExit,
+            this.MILanguage});
             this.MIFile.Name = "MIFile";
             // 
             // MINew
@@ -166,6 +170,26 @@
             resources.ApplyResources(this.MIExit, "MIExit");
             this.MIExit.Name = "MIExit";
             this.MIExit.Click += new System.EventHandler(this.MIExit_Click);
+            // 
+            // MILanguage
+            // 
+            resources.ApplyResources(this.MILanguage, "MILanguage");
+            this.MILanguage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MIGerman,
+            this.MIEnglish});
+            this.MILanguage.Name = "MILanguage";
+            // 
+            // MIGerman
+            // 
+            resources.ApplyResources(this.MIGerman, "MIGerman");
+            this.MIGerman.Name = "MIGerman";
+            this.MIGerman.Click += new System.EventHandler(this.MIGerman_Click);
+            // 
+            // MIEnglish
+            // 
+            resources.ApplyResources(this.MIEnglish, "MIEnglish");
+            this.MIEnglish.Name = "MIEnglish";
+            this.MIEnglish.Click += new System.EventHandler(this.MIEnglish_Click);
             // 
             // FMain
             // 
@@ -207,6 +231,9 @@
         private System.Windows.Forms.ToolStripMenuItem MIDebugging;
         private System.Windows.Forms.ToolStripMenuItem MIPrint;
         private System.Windows.Forms.ToolStripMenuItem MIAnimation;
+        private System.Windows.Forms.ToolStripMenuItem MILanguage;
+        private System.Windows.Forms.ToolStripMenuItem MIGerman;
+        private System.Windows.Forms.ToolStripMenuItem MIEnglish;
     }
 }
 

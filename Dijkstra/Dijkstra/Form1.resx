@@ -117,8 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MIFile.Text" xml:space="preserve">
-    <value>Datei</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MILanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
   <data name="&gt;&gt;MSmain.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -126,8 +127,10 @@
   <data name="&gt;&gt;CMSmain.Name" xml:space="preserve">
     <value>CMSmain</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MINew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="MIEnglish.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
   </data>
   <data name="MISave.Size" type="System.Drawing.Size, System.Drawing">
@@ -160,6 +163,9 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
   </data>
+  <data name="MIFile.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
   <data name="MSmain.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
@@ -174,9 +180,6 @@
   </data>
   <data name="MIend.Text" xml:space="preserve">
     <value>Endknoten</value>
-  </data>
-  <data name="MINew.Text" xml:space="preserve">
-    <value>Neu</value>
   </data>
   <data name="MSmain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -202,11 +205,20 @@
   <data name="&gt;&gt;MIAnimation.Name" xml:space="preserve">
     <value>MIAnimation</value>
   </data>
+  <data name="&gt;&gt;MIExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MIEnglish.Name" xml:space="preserve">
+    <value>MIEnglish</value>
+  </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 6</value>
   </data>
   <data name="&gt;&gt;MIDebugging.Name" xml:space="preserve">
     <value>MIDebugging</value>
+  </data>
+  <data name="MIGerman.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
   <data name="MIPrint.Text" xml:space="preserve">
     <value>Print Nachbarn</value>
@@ -214,11 +226,20 @@
   <data name="&gt;&gt;MSmain.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MIExit.Type" xml:space="preserve">
+  <data name="&gt;&gt;MIEnglish.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MINew.Text" xml:space="preserve">
+    <value>Neu</value>
   </data>
   <data name="&gt;&gt;MIdelete.Name" xml:space="preserve">
     <value>MIdelete</value>
+  </data>
+  <data name="MIstart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 24</value>
+  </data>
+  <data name="&gt;&gt;MIGerman.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MIFile.Name" xml:space="preserve">
     <value>MIFile</value>
@@ -231,6 +252,9 @@
   </data>
   <data name="&gt;&gt;MIend.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MILanguage.Name" xml:space="preserve">
+    <value>MILanguage</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -271,6 +295,9 @@
   <data name="&gt;&gt;MIstart.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MILanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
     <value>toolStripMenuItem1</value>
   </data>
@@ -293,8 +320,8 @@
   <data name="MSmain.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="MIstart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 24</value>
+  <data name="&gt;&gt;MIGerman.Name" xml:space="preserve">
+    <value>MIGerman</value>
   </data>
   <data name="&gt;&gt;MISave.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -335,16 +362,25 @@
   <data name="MIPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
   </data>
-  <metadata name="CMSmain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="CMSmain.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
     <value>en</value>
-  </metadata>
-  <metadata name="MSmain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="MSmain.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>139, 17</value>
-  </metadata>
+  </data>
+  <data name="MIEnglish.Text" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="MIGerman.Text" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="MILanguage.Text" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
 </root>

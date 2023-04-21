@@ -119,25 +119,34 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MIstart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
+    <value>153, 24</value>
   </data>
   <data name="MIstart.Text" xml:space="preserve">
     <value>Startnode</value>
   </data>
   <data name="MIend.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
+    <value>153, 24</value>
   </data>
   <data name="MIend.Text" xml:space="preserve">
     <value>Endnode</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 6</value>
+    <value>150, 6</value>
   </data>
   <data name="MIdelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
+    <value>153, 24</value>
   </data>
   <data name="MIdelete.Text" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 6</value>
+  </data>
+  <data name="MIDebugging.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 24</value>
+  </data>
+  <data name="CMSmain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 112</value>
   </data>
   <data name="MIPrint.Text" xml:space="preserve">
     <value>Print Neighbours</value>
@@ -145,38 +154,26 @@
   <data name="MIAnimation.Text" xml:space="preserve">
     <value>Search Animation</value>
   </data>
-  <data name="CMSmain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 140</value>
-  </data>
-  <data name="MINew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
-  </data>
   <data name="MINew.Text" xml:space="preserve">
     <value>New</value>
-  </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 6</value>
-  </data>
-  <data name="MIOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
   </data>
   <data name="MIOpen.Text" xml:space="preserve">
     <value>Open</value>
   </data>
-  <data name="MISave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
-  </data>
   <data name="MISave.Text" xml:space="preserve">
     <value>Save as</value>
   </data>
-  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 6</value>
-  </data>
-  <data name="MIExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
-  </data>
   <data name="MIExit.Text" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="MIGerman.Text" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="MIEnglish.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="MILanguage.Text" xml:space="preserve">
+    <value>Language</value>
   </data>
   <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 24</value>

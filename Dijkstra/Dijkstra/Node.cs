@@ -73,8 +73,8 @@ namespace Dijkstra
 
         public void MoveNode(int x, int y)
         {
-            X = x;
-            Y = y;
+            X += x;
+            Y += y;
         }
 
     }

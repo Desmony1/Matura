@@ -17,7 +17,7 @@ namespace Dijkstra
     {
         public FMain()
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de");
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -27,7 +27,7 @@ namespace Dijkstra
         private NodeManagement nm = new NodeManagement();
         private Node currNode;
         private Node ctxNode;
-        private int x, y;
+        private int x, y, beforex, beforey;
         private bool connecting;
 
         private void FMain_MouseUp(object sender, MouseEventArgs e)
@@ -65,7 +65,9 @@ namespace Dijkstra
             y = e.Y;
             if (currNode!= null && ModifierKeys.HasFlag(Keys.Control))
             {
-                currNode.MoveNode(x, y);
+                currNode.MoveNode(x-beforex, y-beforey);
+                beforex = x;
+                beforey = y;
             }
             Refresh();
         }
@@ -157,6 +159,20 @@ namespace Dijkstra
             }
         }
 
+        private void MIGerman_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de");
+            Controls.Clear();
+            InitializeComponent();
+        }
+
+        private void MIEnglish_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+            Controls.Clear();
+            InitializeComponent();
+        }
+
         private void MSmain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -171,7 +187,9 @@ namespace Dijkstra
         private void FMain_MouseDown(object sender, MouseEventArgs e)
         {
             currNode = nm.InNode(e.X, e.Y);
-            if (e.Button.HasFlag(MouseButtons.Left))
+            beforex = e.X;
+            beforey = e.Y;
+            if (e.Button.HasFlag(MouseButtons.Left) && !ModifierKeys.HasFlag(Keys.Control))
                 connecting = true;
         }
     }
