@@ -80,13 +80,13 @@ namespace Dijkstra
             return result;
         }
 
-        public bool AddNeighbour(Node n1, Node n2)
+        public bool AddNeighbour(Node n1, Node n2, int distance)
         {
             if (n1.ContainsNeighbour(n2) && n2.ContainsNeighbour(n1))
                 return false;
 
-            n1.AddNeighbour(n2);
-            n2.AddNeighbour(n1);
+            n1.AddNeighbour(n2, distance);
+            n2.AddNeighbour(n1, distance);
             return true;
         }
 
@@ -114,24 +114,26 @@ namespace Dijkstra
 
             while(entry != null)
             {
-                if (entry.n == EndNode)
+                if (entry.N == EndNode)
                     break;
-                entry.n.neighbours.ForEach(node =>
+                entry.N.neighbours.Keys.ToList().ForEach(node =>
                 {
+                    ListEntry tempentry = new ListEntry(node, entry.Distance + entry.N.GetDistanceTo(node), node.Heuristic(EndNode), entry.N);
                     if (closedList.IsInClosed(node))
                     {
 
                     } else if (!openList.IsInOpen(node))
                     {
-                        openList.AddEntry(new ListEntry(node, entry.distance + 1, entry.n));
+                        openList.AddEntry(tempentry);
                     }
                     else
                     {
-                        ListEntry entry2 = openList.Get(node);
-                        if (entry2.distance > entry.distance)
+                        ListEntry entry2 = openList.Get(node);                   
+                        if ((entry2.Distance + entry2.S) > (tempentry.Distance + tempentry.S))
                         {
-                            entry2.distance = entry.distance + 1;
-                            entry2.predecessor = entry.n;
+                            entry2.Distance = tempentry.Distance;
+                            entry2.S = tempentry.S;
+                            entry2.Predecessor = entry.N;
                         }
                     }
                 });
@@ -150,7 +152,7 @@ namespace Dijkstra
 
             List<Node> nodelist = closedList.GetPath(EndNode);
 
-            nodelist.ForEach(node => Console.Write(node.Id+"->"));
+            //nodelist.ForEach(node => Console.Write(node.Id+"->"));
             nodelist.ForEach(node => node.Color = Color.Red);
         }
 
@@ -161,7 +163,6 @@ namespace Dijkstra
 
 
             FMain frame = (FMain)f;
-            Console.WriteLine("Animation");
             ResetMarked();
             OpenList openList = new OpenList();
             ClosedList closedList = new ClosedList();
@@ -169,33 +170,35 @@ namespace Dijkstra
             StartNode.Color = Color.Blue;
             EndNode.Color = Color.Blue;
 
-            ListEntry entry = new ListEntry(StartNode, 0, null);
+            ListEntry entry = new ListEntry(StartNode, 0, StartNode.Heuristic(EndNode), null);
 
             while (entry != null)
             {
-                if(entry.n != StartNode)
-                    entry.n.Color = Color.Orange;
+                if(entry.N != StartNode)
+                    entry.N.Color = Color.Orange;
                 frame.Invalidate();
                 Thread.Sleep(2000);
-                if (entry.n == EndNode)
+                if (entry.N == EndNode)
                     break;
-                entry.n.neighbours.ForEach(node =>
+                entry.N.neighbours.Keys.ToList().ForEach(node =>
                 {
+                    ListEntry tempentry = new ListEntry(node, entry.Distance + entry.N.GetDistanceTo(node), node.Heuristic(EndNode), entry.N);
                     if (closedList.IsInClosed(node))
                     {
 
                     }
                     else if (!openList.IsInOpen(node))
                     {
-                        openList.AddEntry(new ListEntry(node, entry.distance + 1, entry.n));
+                        openList.AddEntry(tempentry);
                     }
                     else
                     {
                         ListEntry entry2 = openList.Get(node);
-                        if (entry2.distance > entry.distance)
+                        if ((entry2.Distance + entry2.S) > (tempentry.Distance + tempentry.S))
                         {
-                            entry2.distance = entry.distance + 1;
-                            entry2.predecessor = entry.n;
+                            entry2.Distance = tempentry.Distance;
+                            entry2.S = tempentry.S;
+                            entry2.Predecessor = entry.N;
                         }
                     }
                 });

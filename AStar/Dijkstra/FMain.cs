@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.Globalization;
+using AStar;
 
 namespace Dijkstra
 {
@@ -36,11 +37,20 @@ namespace Dijkstra
 
             if(currNode == null && !nm.NearNode(e.X, e.Y) && e.Button.HasFlag(MouseButtons.Left))
                 nm.AddNode(e.X, e.Y);
-            else if(currNode != null && tmp != null && e.Button.HasFlag(MouseButtons.Left))
+            else if(currNode != null && tmp != null && e.Button.HasFlag(MouseButtons.Left) && connecting && !tmp.ContainsNeighbour(currNode))
             {
-                nm.AddNeighbour(currNode, tmp);
+                /* Dialog
+                FDialog input_dialog = new FDialog("modal");
+                if(input_dialog.ShowDialog() == DialogResult.OK)
+                {
+                     nm.AddNeighbour(currNode, tmp, input_dialog.Input);
+                     nm.Search();
+                }*/
+                nm.AddNeighbour(currNode, tmp, currNode.Heuristic(tmp));
                 nm.Search();
-            }else if(tmp != null && e.Button.HasFlag(MouseButtons.Right))
+
+            }
+            else if(tmp != null && e.Button.HasFlag(MouseButtons.Right))
             {
                 CMSmain.Show(this, e.X, e.Y);
                 ctxNode = tmp;
@@ -65,6 +75,7 @@ namespace Dijkstra
             y = e.Y;
             if (currNode!= null && ModifierKeys.HasFlag(Keys.Control))
             {
+                currNode.UpdateDistances();
                 currNode.MoveNode(x-beforex, y-beforey);
                 beforex = x;
                 beforey = y;
@@ -154,7 +165,7 @@ namespace Dijkstra
             if (ctxNode != null)
             {
                 Console.Write("(");
-                ctxNode.neighbours.ForEach(node => Console.Write(node.Id + ";"));
+                ctxNode.neighbours.Keys.ToList().ForEach(node => Console.Write(node.Id + ";"));
                 Console.Write(")");
             }
         }
@@ -172,6 +183,7 @@ namespace Dijkstra
             Controls.Clear();
             InitializeComponent();
         }
+
 
         private void MSmain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {

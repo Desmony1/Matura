@@ -146,13 +146,25 @@
     <value>153, 24</value>
   </data>
   <data name="CMSmain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 112</value>
+    <value>211, 140</value>
+  </data>
+  <data name="MIPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 26</value>
   </data>
   <data name="MIPrint.Text" xml:space="preserve">
     <value>Print Neighbours</value>
   </data>
+  <data name="MIAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 26</value>
+  </data>
   <data name="MIAnimation.Text" xml:space="preserve">
     <value>Search Animation</value>
+  </data>
+  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 24</value>
+  </data>
+  <data name="MIFile.Text" xml:space="preserve">
+    <value>File</value>
   </data>
   <data name="MINew.Text" xml:space="preserve">
     <value>New</value>
@@ -166,19 +178,22 @@
   <data name="MIExit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="MILanguage.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="MIGerman.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 26</value>
+  </data>
   <data name="MIGerman.Text" xml:space="preserve">
     <value>German</value>
+  </data>
+  <data name="MIEnglish.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 26</value>
   </data>
   <data name="MIEnglish.Text" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="MILanguage.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 24</value>
-  </data>
-  <data name="MIFile.Text" xml:space="preserve">
-    <value>File</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>AStar</value>
   </data>
 </root>

@@ -13,21 +13,21 @@ namespace Dijkstra
 
         public void AddEntry(ListEntry entry)
         {
-            if (openList.Contains(entry) || openDictionary.ContainsKey(entry.n))
+            if (openList.Contains(entry) || openDictionary.ContainsKey(entry.N))
                 return;
 
             openList.Add(entry);
-            openDictionary.Add(entry.n, entry);
+            openDictionary.Add(entry.N, entry);
         }
 
         public ListEntry GetBest()
         {
             if (openList.Count == 0)
                 return null;
-            openList.Sort((e1, e2) => e1.distance.CompareTo(e2.distance));
+            openList.Sort((e1, e2) => (e1.Distance + e1.S).CompareTo(e2.Distance + e2.S));
             ListEntry best = openList[0];
             openList.RemoveAt(0);
-            openDictionary.Remove(best.n);
+            openDictionary.Remove(best.N);
             return best;
         }
 
@@ -41,6 +41,15 @@ namespace Dijkstra
         public bool IsInOpen(Node n)
         {
             return openDictionary.ContainsKey(n);
+        }
+
+        public void Print()
+        {
+            Console.WriteLine("Print Openlist");
+            openList.ForEach(entry =>
+            {
+                Console.WriteLine("Knoten: " + entry.N.Id+ " Distanz: " + entry.Distance + " Schätzfunktion: " + entry.S + " Vorgänger: " + entry.Predecessor.Id);
+            });
         }
     }
 }

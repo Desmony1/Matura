@@ -12,9 +12,9 @@ namespace Dijkstra
 
         public void AddEntry(ListEntry entry)
         {
-            if (closedDictionary.ContainsKey(entry.n))
+            if (closedDictionary.ContainsKey(entry.N))
                 return;
-            closedDictionary.Add(entry.n, entry);
+            closedDictionary.Add(entry.N, entry);
         }
 
         public List<Node> GetPath(Node endNode)
@@ -23,10 +23,10 @@ namespace Dijkstra
            List<Node> result = new List<Node>();
             while (true)
             {
-                result.Add(tmp.n);
-                if (tmp.predecessor == null)
+                result.Add(tmp.N);
+                if (tmp.Predecessor == null)
                     break;
-                tmp = closedDictionary[tmp.predecessor];
+                tmp = closedDictionary[tmp.Predecessor];
             }
             return result;
         }

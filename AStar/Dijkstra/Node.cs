@@ -15,7 +15,7 @@ namespace Dijkstra
         public int Y { set; get; }
         public Color Color { set; get; }
 
-        public List<Node> neighbours = new List<Node>();
+        public Dictionary<Node, int> neighbours = new Dictionary<Node, int>();
 
         public Node(int id, int x, int y, Color c)
         {
@@ -40,13 +40,17 @@ namespace Dijkstra
 
         public void PaintNeighbours(Graphics g)
         {
-            neighbours.ForEach(node => {
-                if(node.Color != Color.Black && this.Color != Color.Black && node.Color != Color.Orange && node.Color != Color.Blue)
-                    g.DrawLine(new Pen(this.Color), X, Y, node.X, node.Y);
-                else
-                    g.DrawLine(new Pen(Color.Black), X, Y, node.X, node.Y);
-            }
-            );
+            neighbours.Keys.ToList().ForEach(node => {
+                if(this.Id < node.Id)
+                {
+                    SizeF size = g.MeasureString(neighbours[node].ToString(), FONT);
+                    g.DrawString(neighbours[node].ToString(), FONT, Brushes.Black, (this.X + node.X) / 2, (this.Y + node.Y) / 2);
+                    if (node.Color != Color.Black && this.Color != Color.Black && node.Color != Color.Orange && node.Color != Color.Blue)
+                        g.DrawLine(new Pen(this.Color), X, Y, node.X, node.Y);
+                    else
+                        g.DrawLine(new Pen(Color.Black), X, Y, node.X, node.Y);
+                }
+            });
         }
         public bool InNode(int x, int y, int size = 0)
         {
@@ -55,26 +59,40 @@ namespace Dijkstra
             return Math.Sqrt(dx*dx+dy*dy) < SIZE+size;
         }
 
-        public void AddNeighbour(Node n)
+        public void AddNeighbour(Node n, int distance)
         {
             if(n != this)
-                neighbours.Add(n);
+                neighbours.Add(n, distance);
         }
 
         public void RemoveFromNeighbours()
         {
-            neighbours.ForEach(node => node.neighbours.Remove(this));
+            neighbours.Keys.ToList().ForEach(node => node.neighbours.Remove(this));
         }
 
         public bool ContainsNeighbour(Node n)
         {
-            return neighbours.Contains(n);
+            return neighbours.ContainsKey(n);
+        }
+
+        public int GetDistanceTo(Node n)
+        {
+            return neighbours[n];
         }
 
         public void MoveNode(int x, int y)
         {
             X += x;
             Y += y;
+        }
+
+        public void UpdateDistances()
+        {
+            neighbours.Keys.ToList().ForEach(node =>
+            {
+                neighbours[node] = Heuristic(node);
+                node.neighbours[this] = Heuristic(node);
+            });
         }
 
         public int Heuristic(Node n)
