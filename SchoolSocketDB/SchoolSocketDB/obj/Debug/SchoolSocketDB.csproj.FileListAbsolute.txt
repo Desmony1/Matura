@@ -1,0 +1,11 @@
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\bin\Debug\SchoolSocketDB.exe.config
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\bin\Debug\SchoolSocketDB.exe
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\bin\Debug\SchoolSocketDB.pdb
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.AssemblyReference.cache
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.SuggestedBindingRedirects.cache
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.FMain.resources
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.Properties.Resources.resources
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.GenerateResource.cache
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.CoreCompileInputs.cache
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.exe
+D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.pdb
