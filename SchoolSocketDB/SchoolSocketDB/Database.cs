@@ -71,7 +71,7 @@ namespace SchoolSocketDB
                 connection.Close();
         }
 
-        public int GetIDSchool(string description)
+        public static int GetIDSchool(string description)
         {
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandText = "select id from school where description = '" + description + "'";
@@ -83,10 +83,10 @@ namespace SchoolSocketDB
             return NOT_FOUND;
         }
 
-        public int GetIDClass(string school, string classdesc)
+        public static int GetIDClass(string school, string classdesc)
         {
             SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "select id from class where description = '" + classdesc + "' and schoolid='"+this.GetIDSchool(school)+"'";
+            cmd.CommandText = "select id from class where description = '" + classdesc + "' and schoolid='"+Database.GetIDSchool(school)+"'";
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
@@ -95,10 +95,10 @@ namespace SchoolSocketDB
             return NOT_FOUND;
         }
 
-        public int GetIDStudent(string school, string classdesc, string student)
+        public static int GetIDStudent(string school, string classdesc, string student)
         {
             SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "select id from student where description = '" + student + "' and schoolid='" + this.GetIDSchool(school) + "' and classid='"+this.GetIDClass(school, classdesc)+"'";
+            cmd.CommandText = "select id from student where description = '" + student + "' and schoolid='" + Database.GetIDSchool(school) + "' and classid='"+Database.GetIDClass(school, classdesc)+"'";
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
@@ -107,16 +107,72 @@ namespace SchoolSocketDB
             return NOT_FOUND;
         }
 
-        public int GetIDTeacher(string school, string teacherdesc)
+        public static int GetIDTeacher(string school, string teacherdesc)
         {
             SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "select id from teacher where description = '" + teacherdesc + "' and schoolid='" + this.GetIDSchool(school) + "'";
+            cmd.CommandText = "select id from teacher where description = '" + teacherdesc + "' and schoolid='" + Database.GetIDSchool(school) + "'";
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
                 return (int)reader[0];
             }
             return NOT_FOUND;
+        }
+
+        public static List<String> GetSchools()
+        {
+            List<String> schools = new List<String>();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select description from school";
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                schools.Add((String)reader[0]);
+            }
+            reader.Close();
+            return schools;
+        }
+
+        public static List<String> GetClasses(string schooldesc)
+        {
+            List<String> classes = new List<String>();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select description from class where schoolid="+GetIDSchool(schooldesc);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                classes.Add((String)reader[0]);
+            }
+            reader.Close();
+            return classes;
+        }
+
+        public static List<String> GetStudents(string schooldesc, string classdesc)
+        {
+            List<String> students = new List<String>();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select description from student where schoolid=" + GetIDSchool(schooldesc) + " and classid="+GetIDClass(schooldesc, classdesc);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                students.Add((String)reader[0]);
+            }
+            reader.Close();
+            return students;
+        }
+
+        public static List<String> GetTeachers(string schooldesc, string classdesc)
+        {
+            List<String> teachers = new List<String>();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select t1.description from teaches t join teacher t1 on t1.id=t.teacherid and t1.schoolid=t.tschoolid where t.classid="+GetIDClass(schooldesc, classdesc)+" and t.cschoolid="+GetIDSchool(schooldesc);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                teachers.Add((String)reader[0]);
+            }
+            reader.Close();
+            return teachers;
         }
     }
 }

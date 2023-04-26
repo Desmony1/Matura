@@ -31,13 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMain));
             this.MSMain = new System.Windows.Forms.MenuStrip();
             this.MIFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.MIExit = new System.Windows.Forms.ToolStripMenuItem();
             this.MIOption = new System.Windows.Forms.ToolStripMenuItem();
             this.MIConnect = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.MIImport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.MIDisconnect = new System.Windows.Forms.ToolStripMenuItem();
-            this.MIExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.LSchool = new System.Windows.Forms.Label();
+            this.LClass = new System.Windows.Forms.Label();
+            this.LStudents = new System.Windows.Forms.Label();
+            this.LTeachers = new System.Windows.Forms.Label();
+            this.CBSchool = new System.Windows.Forms.ComboBox();
+            this.CBClass = new System.Windows.Forms.ComboBox();
+            this.LBStudents = new System.Windows.Forms.ListBox();
+            this.LBTeachers = new System.Windows.Forms.ListBox();
+            this.MIPrint = new System.Windows.Forms.ToolStripMenuItem();
+            this.PPD = new System.Windows.Forms.PrintPreviewDialog();
+            this.PDoc = new System.Drawing.Printing.PrintDocument();
+            this.PD = new System.Windows.Forms.PrintDialog();
             this.MSMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,12 +69,19 @@
             this.MIFile.Name = "MIFile";
             resources.ApplyResources(this.MIFile, "MIFile");
             // 
+            // MIExit
+            // 
+            this.MIExit.Name = "MIExit";
+            resources.ApplyResources(this.MIExit, "MIExit");
+            this.MIExit.Click += new System.EventHandler(this.MIExit_Click);
+            // 
             // MIOption
             // 
             this.MIOption.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MIConnect,
             this.toolStripMenuItem1,
             this.MIImport,
+            this.MIPrint,
             this.toolStripMenuItem2,
             this.MIDisconnect});
             this.MIOption.Name = "MIOption";
@@ -98,16 +117,91 @@
             resources.ApplyResources(this.MIDisconnect, "MIDisconnect");
             this.MIDisconnect.Click += new System.EventHandler(this.MIDisconnect_Click);
             // 
-            // MIExit
+            // LSchool
             // 
-            this.MIExit.Name = "MIExit";
-            resources.ApplyResources(this.MIExit, "MIExit");
-            this.MIExit.Click += new System.EventHandler(this.MIExit_Click);
+            resources.ApplyResources(this.LSchool, "LSchool");
+            this.LSchool.Name = "LSchool";
+            this.LSchool.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // LClass
+            // 
+            resources.ApplyResources(this.LClass, "LClass");
+            this.LClass.Name = "LClass";
+            // 
+            // LStudents
+            // 
+            resources.ApplyResources(this.LStudents, "LStudents");
+            this.LStudents.Name = "LStudents";
+            // 
+            // LTeachers
+            // 
+            resources.ApplyResources(this.LTeachers, "LTeachers");
+            this.LTeachers.Name = "LTeachers";
+            this.LTeachers.Click += new System.EventHandler(this.LTeachers_Click);
+            // 
+            // CBSchool
+            // 
+            this.CBSchool.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBSchool.FormattingEnabled = true;
+            resources.ApplyResources(this.CBSchool, "CBSchool");
+            this.CBSchool.Name = "CBSchool";
+            this.CBSchool.SelectedIndexChanged += new System.EventHandler(this.CBSchool_SelectedIndexChanged);
+            // 
+            // CBClass
+            // 
+            this.CBClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBClass.FormattingEnabled = true;
+            resources.ApplyResources(this.CBClass, "CBClass");
+            this.CBClass.Name = "CBClass";
+            this.CBClass.SelectedIndexChanged += new System.EventHandler(this.CBClass_SelectedIndexChanged);
+            // 
+            // LBStudents
+            // 
+            this.LBStudents.FormattingEnabled = true;
+            resources.ApplyResources(this.LBStudents, "LBStudents");
+            this.LBStudents.Name = "LBStudents";
+            // 
+            // LBTeachers
+            // 
+            this.LBTeachers.FormattingEnabled = true;
+            resources.ApplyResources(this.LBTeachers, "LBTeachers");
+            this.LBTeachers.Name = "LBTeachers";
+            // 
+            // MIPrint
+            // 
+            this.MIPrint.Name = "MIPrint";
+            resources.ApplyResources(this.MIPrint, "MIPrint");
+            this.MIPrint.Click += new System.EventHandler(this.MIPrint_Click);
+            // 
+            // PPD
+            // 
+            resources.ApplyResources(this.PPD, "PPD");
+            this.PPD.Document = this.PDoc;
+            this.PPD.Name = "PPD";
+            // 
+            // PDoc
+            // 
+            this.PDoc.BeginPrint += new System.Drawing.Printing.PrintEventHandler(this.PDoc_BeginPrint);
+            this.PDoc.EndPrint += new System.Drawing.Printing.PrintEventHandler(this.PDoc_EndPrint);
+            this.PDoc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PDoc_PrintPage);
+            this.PDoc.QueryPageSettings += new System.Drawing.Printing.QueryPageSettingsEventHandler(this.PDoc_QueryPageSettings);
+            // 
+            // PD
+            // 
+            this.PD.UseEXDialog = true;
             // 
             // FMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LBTeachers);
+            this.Controls.Add(this.LBStudents);
+            this.Controls.Add(this.CBClass);
+            this.Controls.Add(this.CBSchool);
+            this.Controls.Add(this.LTeachers);
+            this.Controls.Add(this.LStudents);
+            this.Controls.Add(this.LClass);
+            this.Controls.Add(this.LSchool);
             this.Controls.Add(this.MSMain);
             this.MainMenuStrip = this.MSMain;
             this.Name = "FMain";
@@ -130,6 +224,18 @@
         private System.Windows.Forms.ToolStripMenuItem MIImport;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem MIDisconnect;
+        private System.Windows.Forms.Label LSchool;
+        private System.Windows.Forms.Label LClass;
+        private System.Windows.Forms.Label LStudents;
+        private System.Windows.Forms.Label LTeachers;
+        private System.Windows.Forms.ComboBox CBSchool;
+        private System.Windows.Forms.ComboBox CBClass;
+        private System.Windows.Forms.ListBox LBStudents;
+        private System.Windows.Forms.ListBox LBTeachers;
+        private System.Windows.Forms.ToolStripMenuItem MIPrint;
+        private System.Windows.Forms.PrintPreviewDialog PPD;
+        private System.Drawing.Printing.PrintDocument PDoc;
+        private System.Windows.Forms.PrintDialog PD;
     }
 }
 

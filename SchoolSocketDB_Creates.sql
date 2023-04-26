@@ -43,3 +43,9 @@ create table teaches (
 	foreign key(teacherid, tschoolid) references teacher(id, schoolid),
 	foreign key (classid, cschoolid) references class (id, schoolid)
 );
+
+select * from school;
+select * from teacher;
+select * from class;
+select * from teaches;
+select * from student;
