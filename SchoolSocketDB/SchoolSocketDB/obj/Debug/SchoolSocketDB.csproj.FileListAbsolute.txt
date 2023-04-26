@@ -9,3 +9,13 @@ D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.Ge
 D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.CoreCompileInputs.cache
 D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.exe
 D:\Daten\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.pdb
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\bin\Debug\SchoolSocketDB.exe.config
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\bin\Debug\SchoolSocketDB.exe
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\bin\Debug\SchoolSocketDB.pdb
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.AssemblyReference.cache
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.FMain.resources
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.Properties.Resources.resources
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.GenerateResource.cache
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.csproj.CoreCompileInputs.cache
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.exe
+D:\Daten\5BHIF\Matura\SchoolSocketDB\SchoolSocketDB\obj\Debug\SchoolSocketDB.pdb

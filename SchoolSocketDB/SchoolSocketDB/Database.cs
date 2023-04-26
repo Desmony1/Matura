@@ -10,6 +10,7 @@ namespace SchoolSocketDB
 {
     internal class Database
     {
+        public static readonly int NOT_FOUND = -1;
         private static SqlConnection connection;
 
         private static readonly string CONN_SERVER;
@@ -70,9 +71,52 @@ namespace SchoolSocketDB
                 connection.Close();
         }
 
+        public int GetIDSchool(string description)
+        {
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select id from school where description = '" + description + "'";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return (int)reader[0];
+            }
+            return NOT_FOUND;
+        }
 
+        public int GetIDClass(string school, string classdesc)
+        {
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select id from class where description = '" + classdesc + "' and schoolid='"+this.GetIDSchool(school)+"'";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return (int)reader[0];
+            }
+            return NOT_FOUND;
+        }
 
+        public int GetIDStudent(string school, string classdesc, string student)
+        {
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select id from student where description = '" + student + "' and schoolid='" + this.GetIDSchool(school) + "' and classid='"+this.GetIDClass(school, classdesc)+"'";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return (int)reader[0];
+            }
+            return NOT_FOUND;
+        }
 
-
+        public int GetIDTeacher(string school, string teacherdesc)
+        {
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "select id from teacher where description = '" + teacherdesc + "' and schoolid='" + this.GetIDSchool(school) + "'";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return (int)reader[0];
+            }
+            return NOT_FOUND;
+        }
     }
 }

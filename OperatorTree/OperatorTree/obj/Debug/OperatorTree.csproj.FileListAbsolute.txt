@@ -25,3 +25,16 @@ C:\Users\lkrau\OneDrive - HTBLuVA Wiener Neustadt\Daten\4BHIF\POS\OperatorTree\O
 C:\Users\lkrau\OneDrive - HTBLuVA Wiener Neustadt\Daten\4BHIF\POS\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.CoreCompileInputs.cache
 C:\Users\lkrau\OneDrive - HTBLuVA Wiener Neustadt\Daten\4BHIF\POS\OperatorTree\OperatorTree\obj\Debug\OperatorTree.exe
 C:\Users\lkrau\OneDrive - HTBLuVA Wiener Neustadt\Daten\4BHIF\POS\OperatorTree\OperatorTree\obj\Debug\OperatorTree.pdb
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\bin\Debug\OperatorTree.exe.config
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\bin\Debug\OperatorTree.exe
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\bin\Debug\OperatorTree.pdb
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.AssemblyReference.cache
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.AnimationDialog.resources
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.FMain.resources
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.OperandDialog.resources
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.OperatorDialog.resources
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.Properties.Resources.resources
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.GenerateResource.cache
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.CoreCompileInputs.cache
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.exe
+D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.pdb
