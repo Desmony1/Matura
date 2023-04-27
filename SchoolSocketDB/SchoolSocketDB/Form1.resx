@@ -121,11 +121,23 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 24</value>
+  </data>
+  <data name="MIFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="MIOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 24</value>
+  </data>
+  <data name="MIOption.Text" xml:space="preserve">
+    <value>Option</value>
+  </data>
   <data name="MSMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="MSMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>617, 28</value>
+    <value>786, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MSMain.TabIndex" type="System.Int32, mscorlib">
@@ -146,27 +158,15 @@
   <data name="&gt;&gt;MSMain.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 24</value>
-  </data>
-  <data name="MIFile.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MIExit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Alt+F4</value>
   </data>
   <data name="MIExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>169, 26</value>
   </data>
   <data name="MIExit.Text" xml:space="preserve">
     <value>Exit</value>
-  </data>
-  <data name="MIOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
-  </data>
-  <data name="MIOption.Text" xml:space="preserve">
-    <value>Option</value>
   </data>
   <data name="MIConnect.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
@@ -182,6 +182,12 @@
   </data>
   <data name="MIImport.Text" xml:space="preserve">
     <value>Import</value>
+  </data>
+  <data name="MIPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="MIPrint.Text" xml:space="preserve">
+    <value>Print</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 6</value>
@@ -389,12 +395,6 @@
   </data>
   <data name="&gt;&gt;LBTeachers.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="MIPrint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="MIPrint.Text" xml:space="preserve">
-    <value>Print</value>
   </data>
   <metadata name="PPD.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>130, 17</value>
@@ -606,7 +606,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>617, 721</value>
+    <value>786, 721</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>SchoolDB</value>
@@ -647,6 +647,12 @@
   <data name="&gt;&gt;MIImport.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MIPrint.Name" xml:space="preserve">
+    <value>MIPrint</value>
+  </data>
+  <data name="&gt;&gt;MIPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
     <value>toolStripMenuItem2</value>
   </data>
@@ -657,12 +663,6 @@
     <value>MIDisconnect</value>
   </data>
   <data name="&gt;&gt;MIDisconnect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MIPrint.Name" xml:space="preserve">
-    <value>MIPrint</value>
-  </data>
-  <data name="&gt;&gt;MIPrint.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PDoc.Name" xml:space="preserve">

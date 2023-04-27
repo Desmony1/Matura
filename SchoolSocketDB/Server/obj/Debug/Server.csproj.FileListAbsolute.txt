@@ -1,0 +1,8 @@
+D:\Daten\Matura\SchoolSocketDB\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\Daten\Matura\SchoolSocketDB\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+D:\Daten\Matura\SchoolSocketDB\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Daten\Matura\SchoolSocketDB\Server\bin\Debug\Server.exe.config
+D:\Daten\Matura\SchoolSocketDB\Server\bin\Debug\Server.exe
+D:\Daten\Matura\SchoolSocketDB\Server\bin\Debug\Server.pdb
+D:\Daten\Matura\SchoolSocketDB\Server\obj\Debug\Server.exe
+D:\Daten\Matura\SchoolSocketDB\Server\obj\Debug\Server.pdb

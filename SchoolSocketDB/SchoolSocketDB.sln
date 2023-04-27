@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSocketDB", "SchoolSocketDB\SchoolSocketDB.csproj", "{9E0266B3-CCE1-4201-9EE2-A10FC031F816}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{E5268A54-D208-44A7-95B2-5F316FC52174}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9E0266B3-CCE1-4201-9EE2-A10FC031F816}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E0266B3-CCE1-4201-9EE2-A10FC031F816}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E0266B3-CCE1-4201-9EE2-A10FC031F816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5268A54-D208-44A7-95B2-5F316FC52174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5268A54-D208-44A7-95B2-5F316FC52174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5268A54-D208-44A7-95B2-5F316FC52174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5268A54-D208-44A7-95B2-5F316FC52174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

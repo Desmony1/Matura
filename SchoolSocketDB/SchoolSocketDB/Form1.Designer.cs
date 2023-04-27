@@ -36,6 +36,7 @@
             this.MIConnect = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.MIImport = new System.Windows.Forms.ToolStripMenuItem();
+            this.MIPrint = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.MIDisconnect = new System.Windows.Forms.ToolStripMenuItem();
             this.LSchool = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.CBClass = new System.Windows.Forms.ComboBox();
             this.LBStudents = new System.Windows.Forms.ListBox();
             this.LBTeachers = new System.Windows.Forms.ListBox();
-            this.MIPrint = new System.Windows.Forms.ToolStripMenuItem();
             this.PPD = new System.Windows.Forms.PrintPreviewDialog();
             this.PDoc = new System.Drawing.Printing.PrintDocument();
             this.PD = new System.Windows.Forms.PrintDialog();
@@ -61,6 +61,7 @@
             this.MIOption});
             resources.ApplyResources(this.MSMain, "MSMain");
             this.MSMain.Name = "MSMain";
+            this.MSMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MSMain_ItemClicked);
             // 
             // MIFile
             // 
@@ -103,6 +104,12 @@
             this.MIImport.Name = "MIImport";
             resources.ApplyResources(this.MIImport, "MIImport");
             this.MIImport.Click += new System.EventHandler(this.MIImport_Click);
+            // 
+            // MIPrint
+            // 
+            this.MIPrint.Name = "MIPrint";
+            resources.ApplyResources(this.MIPrint, "MIPrint");
+            this.MIPrint.Click += new System.EventHandler(this.MIPrint_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -166,12 +173,6 @@
             this.LBTeachers.FormattingEnabled = true;
             resources.ApplyResources(this.LBTeachers, "LBTeachers");
             this.LBTeachers.Name = "LBTeachers";
-            // 
-            // MIPrint
-            // 
-            this.MIPrint.Name = "MIPrint";
-            resources.ApplyResources(this.MIPrint, "MIPrint");
-            this.MIPrint.Click += new System.EventHandler(this.MIPrint_Click);
             // 
             // PPD
             // 
