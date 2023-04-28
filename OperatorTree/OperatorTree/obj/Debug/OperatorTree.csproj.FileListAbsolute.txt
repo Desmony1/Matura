@@ -38,3 +38,17 @@ D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.Ge
 D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.CoreCompileInputs.cache
 D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.exe
 D:\Daten\5BHIF\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.pdb
+D:\Daten\Matura\OperatorTree\OperatorTree\bin\Debug\OperatorTree.exe.config
+D:\Daten\Matura\OperatorTree\OperatorTree\bin\Debug\OperatorTree.exe
+D:\Daten\Matura\OperatorTree\OperatorTree\bin\Debug\OperatorTree.pdb
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.AssemblyReference.cache
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.SuggestedBindingRedirects.cache
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.AnimationDialog.resources
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.FMain.resources
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.OperandDialog.resources
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.OperatorDialog.resources
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.Properties.Resources.resources
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.GenerateResource.cache
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.csproj.CoreCompileInputs.cache
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.exe
+D:\Daten\Matura\OperatorTree\OperatorTree\obj\Debug\OperatorTree.pdb

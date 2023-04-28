@@ -38,7 +38,11 @@ namespace OperatorTree
                 return false;
             Boolean result = true;
             nodes.ForEach(n => { if (n is Operator) { Operator node = (Operator)n; if (node.Left == null || node.Right == null) { result = false; } } });
-            nodes.ForEach(n => { int count = 0; if (n.Parent == null) { count++; }; if (count > 1) { result = false; } });
+            int count = 0;
+            nodes.ForEach(n => { if (n.Parent == null) { count++; };});
+            if(count > 1){
+                result = false;
+            }
             return result;
         }
         public void GetInfix(Node n)
