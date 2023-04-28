@@ -78,27 +78,33 @@ namespace Server
             string response = "";
             if (message.StartsWith("import"))
             {
-                Import(message.Substring(message.LastIndexOf(':')+1));
+                Import(message.Substring(message.LastIndexOf("Parameter:")+10));
             }else if (message.StartsWith("GetSchools"))
             {
                 Database.GetSchools().ForEach(school => response += school+",");
-                response = response.Remove(response.Length-1);
+                if (response.Length > 0)
+                    response = response.Remove(response.Length - 1);
+                else
+                    response = " ";
             }else if (message.StartsWith("GetClasses"))
             {
 
                 Database.GetClasses(message.Substring(message.LastIndexOf(':') + 1)).ForEach(classdesc => response += classdesc+",");
-                response = response.Remove(response.Length - 1);
+                if (response.Length > 0)
+                    response = response.Remove(response.Length - 1);
             }else if (message.StartsWith("GetStudents"))
             {
                 string[] parameters = message.Substring(message.LastIndexOf(':') + 1).Split(',');
                 Database.GetStudents(parameters[0], parameters[1]).ForEach(student => response += student + ",");
-                response = response.Remove(response.Length - 1);
+                if (response.Length > 0)
+                    response = response.Remove(response.Length - 1);
             }
             else if (message.StartsWith("GetTeachers"))
             {
                 string[] parameters = message.Substring(message.LastIndexOf(':') + 1).Split(',');
                 Database.GetTeachers(parameters[0], parameters[1]).ForEach(teacher => response += teacher + ",");
-                response = response.Remove(response.Length - 1);
+                if (response.Length > 0)
+                    response = response.Remove(response.Length - 1);
             }
             return response;
         }
@@ -151,6 +157,7 @@ namespace Server
                     reader.Close();
                 });
             });
+            Console.WriteLine("Import");
         }
 
         private void InsertSchool(string schooldesc)
