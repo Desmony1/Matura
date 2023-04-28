@@ -132,19 +132,22 @@ namespace OperatorTree
             Node tmp = t.IsInNode(e.X, e.Y);
             if(connectingNode != null && tmp != null && connectingNode is Operator)
             {
-                if(tmp.Y > connectingNode.Y)
+                Operator n = (Operator)connectingNode;
+                if(n.Left == null || n.Right == null)
                 {
-                    Operator n = (Operator)connectingNode;
-                    tmp.Parent = connectingNode;
-                    if (n.Left == null && tmp.X < connectingNode.X)
+                    if (tmp.Y > connectingNode.Y)
                     {
-                        n.Left = tmp;
+                        tmp.Parent = connectingNode;
+                        if (n.Left == null && tmp.X < connectingNode.X)
+                        {
+                            n.Left = tmp;
+                        }
+                        else if (n.Right == null)
+                        {
+                            n.Right = tmp;
+                        }
                     }
-                    else if(n.Right == null)
-                    {
-                        n.Right = tmp;
-                    }
-                }
+                }          
             }
             movingNode = null;
             connectingNode = null;
