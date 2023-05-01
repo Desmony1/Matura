@@ -50,13 +50,13 @@
             this.MILanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.MIGerman = new System.Windows.Forms.ToolStripMenuItem();
             this.MIEnglish = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTotal = new System.Windows.Forms.Label();
             this.CMSmain.SuspendLayout();
             this.MSmain.SuspendLayout();
             this.SuspendLayout();
             // 
             // CMSmain
             // 
-            resources.ApplyResources(this.CMSmain, "CMSmain");
             this.CMSmain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.CMSmain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MIstart,
@@ -66,67 +66,67 @@
             this.toolStripMenuItem4,
             this.MIDebugging});
             this.CMSmain.Name = "CMSmain";
+            resources.ApplyResources(this.CMSmain, "CMSmain");
             // 
             // MIstart
             // 
-            resources.ApplyResources(this.MIstart, "MIstart");
             this.MIstart.Name = "MIstart";
+            resources.ApplyResources(this.MIstart, "MIstart");
             this.MIstart.Click += new System.EventHandler(this.MIstart_Click);
             // 
             // MIend
             // 
-            resources.ApplyResources(this.MIend, "MIend");
             this.MIend.Name = "MIend";
+            resources.ApplyResources(this.MIend, "MIend");
             this.MIend.Click += new System.EventHandler(this.MIend_Click);
             // 
             // toolStripMenuItem1
             // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             // 
             // MIdelete
             // 
-            resources.ApplyResources(this.MIdelete, "MIdelete");
             this.MIdelete.Name = "MIdelete";
+            resources.ApplyResources(this.MIdelete, "MIdelete");
             this.MIdelete.Click += new System.EventHandler(this.MIdelete_Click);
             // 
             // toolStripMenuItem4
             // 
-            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
             // 
             // MIDebugging
             // 
-            resources.ApplyResources(this.MIDebugging, "MIDebugging");
             this.MIDebugging.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MIPrint,
             this.MIAnimation});
             this.MIDebugging.Name = "MIDebugging";
+            resources.ApplyResources(this.MIDebugging, "MIDebugging");
             // 
             // MIPrint
             // 
-            resources.ApplyResources(this.MIPrint, "MIPrint");
             this.MIPrint.Name = "MIPrint";
+            resources.ApplyResources(this.MIPrint, "MIPrint");
             this.MIPrint.Click += new System.EventHandler(this.MIPrint_Click);
             // 
             // MIAnimation
             // 
-            resources.ApplyResources(this.MIAnimation, "MIAnimation");
             this.MIAnimation.Name = "MIAnimation";
+            resources.ApplyResources(this.MIAnimation, "MIAnimation");
             this.MIAnimation.Click += new System.EventHandler(this.MIAnimation_Click);
             // 
             // MSmain
             // 
-            resources.ApplyResources(this.MSmain, "MSmain");
             this.MSmain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MSmain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MIFile});
+            resources.ApplyResources(this.MSmain, "MSmain");
             this.MSmain.Name = "MSmain";
             this.MSmain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MSmain_ItemClicked);
             // 
             // MIFile
             // 
-            resources.ApplyResources(this.MIFile, "MIFile");
             this.MIFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MINew,
             this.toolStripMenuItem2,
@@ -136,68 +136,75 @@
             this.MIExit,
             this.MILanguage});
             this.MIFile.Name = "MIFile";
+            resources.ApplyResources(this.MIFile, "MIFile");
             // 
             // MINew
             // 
-            resources.ApplyResources(this.MINew, "MINew");
             this.MINew.Name = "MINew";
+            resources.ApplyResources(this.MINew, "MINew");
             this.MINew.Click += new System.EventHandler(this.MINew_Click);
             // 
             // toolStripMenuItem2
             // 
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             // 
             // MIOpen
             // 
-            resources.ApplyResources(this.MIOpen, "MIOpen");
             this.MIOpen.Name = "MIOpen";
+            resources.ApplyResources(this.MIOpen, "MIOpen");
             this.MIOpen.Click += new System.EventHandler(this.MIOpen_Click);
             // 
             // MISave
             // 
-            resources.ApplyResources(this.MISave, "MISave");
             this.MISave.Name = "MISave";
+            resources.ApplyResources(this.MISave, "MISave");
             this.MISave.Click += new System.EventHandler(this.MISave_Click);
             // 
             // toolStripMenuItem3
             // 
-            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
             // 
             // MIExit
             // 
-            resources.ApplyResources(this.MIExit, "MIExit");
             this.MIExit.Name = "MIExit";
+            resources.ApplyResources(this.MIExit, "MIExit");
             this.MIExit.Click += new System.EventHandler(this.MIExit_Click);
             // 
             // MILanguage
             // 
-            resources.ApplyResources(this.MILanguage, "MILanguage");
             this.MILanguage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MIGerman,
             this.MIEnglish});
             this.MILanguage.Name = "MILanguage";
+            resources.ApplyResources(this.MILanguage, "MILanguage");
             // 
             // MIGerman
             // 
-            resources.ApplyResources(this.MIGerman, "MIGerman");
             this.MIGerman.Checked = true;
             this.MIGerman.CheckState = System.Windows.Forms.CheckState.Checked;
             this.MIGerman.Name = "MIGerman";
+            resources.ApplyResources(this.MIGerman, "MIGerman");
             this.MIGerman.Click += new System.EventHandler(this.MIGerman_Click);
             // 
             // MIEnglish
             // 
-            resources.ApplyResources(this.MIEnglish, "MIEnglish");
             this.MIEnglish.Name = "MIEnglish";
+            resources.ApplyResources(this.MIEnglish, "MIEnglish");
             this.MIEnglish.Click += new System.EventHandler(this.MIEnglish_Click);
+            // 
+            // LTotal
+            // 
+            resources.ApplyResources(this.LTotal, "LTotal");
+            this.LTotal.Name = "LTotal";
             // 
             // FMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.LTotal);
             this.Controls.Add(this.MSmain);
             this.MainMenuStrip = this.MSmain;
             this.Name = "FMain";
@@ -236,6 +243,7 @@
         private System.Windows.Forms.ToolStripMenuItem MILanguage;
         private System.Windows.Forms.ToolStripMenuItem MIGerman;
         private System.Windows.Forms.ToolStripMenuItem MIEnglish;
+        private System.Windows.Forms.Label LTotal;
     }
 }
 

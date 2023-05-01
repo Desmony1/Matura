@@ -101,10 +101,12 @@ namespace Dijkstra
             nodes.ForEach(node => node.Color = Color.Black);
         }
 
-        public void Search()
+        public void Search(Object f)
         {
             if (StartNode == null || EndNode == null)
                 return;
+
+            FMain frame = (FMain)f;
 
             ResetMarked();
             OpenList openList = new OpenList();
@@ -146,14 +148,19 @@ namespace Dijkstra
             {
                 StartNode.Color = Color.Red;
                 EndNode.Color = Color.Red;
+                frame.SetLabel();
                 return;
             }
 
 
             List<Node> nodelist = closedList.GetPath(EndNode);
 
+
             //nodelist.ForEach(node => Console.Write(node.Id+"->"));
-            nodelist.ForEach(node => node.Color = Color.Red);
+            frame.SetLabel(closedList.GetPathTotal(EndNode));
+            nodelist.ForEach(node => {
+                node.Color = Color.Red;
+            });
         }
 
         public void SearchAnimation(Object f)

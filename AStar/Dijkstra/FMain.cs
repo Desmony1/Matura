@@ -11,18 +11,20 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Globalization;
 using AStar;
+using System.Resources;
 
 namespace Dijkstra
 {
     public partial class FMain : Form
     {
+        ResourceManager manager = new ResourceManager(typeof(FMain));
         public FMain()
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de");
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-
+            SetLabel();
         }
 
         private NodeManagement nm = new NodeManagement();
@@ -47,7 +49,7 @@ namespace Dijkstra
                      nm.Search();
                 }*/
                 nm.AddNeighbour(currNode, tmp, currNode.Heuristic(tmp));
-                nm.Search();
+                nm.Search(this);
 
             }
             else if(tmp != null && e.Button.HasFlag(MouseButtons.Right))
@@ -79,7 +81,7 @@ namespace Dijkstra
                 currNode.MoveNode(x-beforex, y-beforey);
                 beforex = x;
                 beforey = y;
-                nm.Search();
+                nm.Search(this);
             }
             Refresh();
         }
@@ -89,7 +91,7 @@ namespace Dijkstra
             if(ctxNode != null && ctxNode != nm.EndNode)
             {
                 nm.StartNode = ctxNode;
-                nm.Search();
+                nm.Search(this);
             }
 
             Refresh();
@@ -100,7 +102,7 @@ namespace Dijkstra
             if (ctxNode != null && ctxNode != nm.StartNode)
             {
                 nm.EndNode = ctxNode;
-                nm.Search();
+                nm.Search(this);
             }           
             Refresh();
         }
@@ -111,7 +113,7 @@ namespace Dijkstra
             {
                 nm.RemoveNode(ctxNode);
                 nm.ResetMarked();
-                nm.Search();
+                nm.Search(this);
             }
                 
             Refresh();
@@ -138,6 +140,7 @@ namespace Dijkstra
                 FileStream fs = new FileStream(ofd.FileName, FileMode.Open);
                 BinaryFormatter bf = new BinaryFormatter();
                 nm = (NodeManagement)bf.Deserialize(fs);
+                nm.Search(this);
                 Refresh();
             }
         }
@@ -180,6 +183,7 @@ namespace Dijkstra
                 InitializeComponent();
                 MIEnglish.Checked = false;
                 MIGerman.Checked = true;
+                nm.Search(this);
             }
             
         }
@@ -193,6 +197,7 @@ namespace Dijkstra
                 InitializeComponent();
                 MIGerman.Checked = false;
                 MIEnglish.Checked = true;
+                nm.Search(this);
             }          
         }
 
@@ -215,6 +220,20 @@ namespace Dijkstra
             beforey = e.Y;
             if (e.Button.HasFlag(MouseButtons.Left) && !ModifierKeys.HasFlag(Keys.Control))
                 connecting = true;
+        }
+        public void SetLabel(int size = 0)
+        {
+            if(LTotal.Text.LastIndexOf(':')+1 < LTotal.Text.Length)
+                LTotal.Text = LTotal.Text.Remove(LTotal.Text.LastIndexOf(':')+1);
+            if (size == 0)
+            {
+                Console.WriteLine("SetLabel");
+                LTotal.Text += manager.GetString("NotFound", Thread.CurrentThread.CurrentUICulture);
+            }
+            else
+            {
+                LTotal.Text += size.ToString();
+            }
         }
     }
 }

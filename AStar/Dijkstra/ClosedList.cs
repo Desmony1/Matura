@@ -31,6 +31,10 @@ namespace Dijkstra
             return result;
         }
 
+        public int GetPathTotal(Node endNode)
+        {
+            return closedDictionary[endNode].Distance;
+        }
         public bool IsInClosed(Node n)
         {
             return closedDictionary.ContainsKey(n);
