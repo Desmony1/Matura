@@ -146,7 +146,7 @@
     <value>153, 24</value>
   </data>
   <data name="CMSmain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 140</value>
+    <value>154, 112</value>
   </data>
   <data name="MIPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 26</value>
@@ -160,29 +160,35 @@
   <data name="MIAnimation.Text" xml:space="preserve">
     <value>Search Animation</value>
   </data>
-  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 24</value>
-  </data>
-  <data name="MIFile.Text" xml:space="preserve">
-    <value>File</value>
+  <data name="MINew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
   </data>
   <data name="MINew.Text" xml:space="preserve">
     <value>New</value>
   </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 6</value>
+  </data>
+  <data name="MIOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
+  </data>
   <data name="MIOpen.Text" xml:space="preserve">
     <value>Open</value>
+  </data>
+  <data name="MISave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
   </data>
   <data name="MISave.Text" xml:space="preserve">
     <value>Save as</value>
   </data>
+  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 6</value>
+  </data>
+  <data name="MIExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
+  </data>
   <data name="MIExit.Text" xml:space="preserve">
     <value>Exit</value>
-  </data>
-  <data name="MILanguage.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="MIGerman.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 26</value>
   </data>
   <data name="MIGerman.Text" xml:space="preserve">
     <value>German</value>
@@ -193,7 +199,13 @@
   <data name="MIEnglish.Text" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>AStar</value>
+  <data name="MILanguage.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="MIFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 24</value>
+  </data>
+  <data name="MIFile.Text" xml:space="preserve">
+    <value>File</value>
   </data>
 </root>

@@ -40,15 +40,22 @@ namespace Dijkstra
 
         public void PaintNeighbours(Graphics g)
         {
+            float posX, posY;
             neighbours.Keys.ToList().ForEach(node => {
                 if(this.Id < node.Id)
                 {
-                    SizeF size = g.MeasureString(neighbours[node].ToString(), FONT);
-                    g.DrawString(neighbours[node].ToString(), FONT, Brushes.Black, (this.X + node.X) / 2, (this.Y + node.Y) / 2);
                     if (node.Color != Color.Black && this.Color != Color.Black && node.Color != Color.Orange && node.Color != Color.Blue)
                         g.DrawLine(new Pen(this.Color), X, Y, node.X, node.Y);
                     else
                         g.DrawLine(new Pen(Color.Black), X, Y, node.X, node.Y);
+
+                    SizeF size = g.MeasureString(neighbours[node].ToString(), FONT);
+                    posX = (X + (node.X - X) / 2) - size.Width / 2;
+                    posY = (Y + (node.Y - Y) / 2) - size.Height / 2;
+                    
+                    g.FillRectangle(Brushes.White, posX, posY, size.Width, size.Height);
+                    g.DrawRectangle(this.Color == Color.Red && node.Color == Color.Red ? new Pen(this.Color) : Pens.Black, posX, posY, size.Width, size.Height);
+                    g.DrawString(neighbours[node].ToString(), FONT, this.Color == Color.Red && node.Color == Color.Red ? new SolidBrush(this.Color) : Brushes.Black, posX, posY);
                 }
             });
         }

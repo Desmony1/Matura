@@ -79,6 +79,7 @@ namespace Dijkstra
                 currNode.MoveNode(x-beforex, y-beforey);
                 beforex = x;
                 beforey = y;
+                nm.Search();
             }
             Refresh();
         }
@@ -172,16 +173,27 @@ namespace Dijkstra
 
         private void MIGerman_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de");
-            Controls.Clear();
-            InitializeComponent();
+            if (MIEnglish.Checked)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de");
+                Controls.Clear();
+                InitializeComponent();
+                MIEnglish.Checked = false;
+                MIGerman.Checked = true;
+            }
+            
         }
 
         private void MIEnglish_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
-            Controls.Clear();
-            InitializeComponent();
+            if (MIGerman.Checked)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+                Controls.Clear();
+                InitializeComponent();
+                MIGerman.Checked = false;
+                MIEnglish.Checked = true;
+            }          
         }
 
 

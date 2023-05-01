@@ -182,6 +182,8 @@
             // MIGerman
             // 
             resources.ApplyResources(this.MIGerman, "MIGerman");
+            this.MIGerman.Checked = true;
+            this.MIGerman.CheckState = System.Windows.Forms.CheckState.Checked;
             this.MIGerman.Name = "MIGerman";
             this.MIGerman.Click += new System.EventHandler(this.MIGerman_Click);
             // 
