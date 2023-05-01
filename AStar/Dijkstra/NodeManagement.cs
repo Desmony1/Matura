@@ -5,6 +5,7 @@ using System.Threading;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Dijkstra
 {
@@ -14,6 +15,7 @@ namespace Dijkstra
         List<Node> nodes = new List<Node>();
         private int counter = 0;
         private Node startNode, endNode;
+        public static readonly string logpath = "C:\\temp\\log.txt";
 
         public Node StartNode
         {
@@ -156,11 +158,17 @@ namespace Dijkstra
             List<Node> nodelist = closedList.GetPath(EndNode);
 
 
+
+            StreamWriter wr = new StreamWriter(logpath, true);
+            wr.WriteLine("New Path Searched (" + DateTime.Now.ToString()+"):");
+
             //nodelist.ForEach(node => Console.Write(node.Id+"->"));
             frame.SetLabel(closedList.GetPathTotal(EndNode));
             nodelist.ForEach(node => {
                 node.Color = Color.Red;
+                wr.WriteLine(node.Id);
             });
+            wr.Close();
         }
 
         public void SearchAnimation(Object f)

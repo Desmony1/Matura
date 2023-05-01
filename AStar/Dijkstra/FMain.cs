@@ -114,8 +114,7 @@ namespace Dijkstra
                 nm.RemoveNode(ctxNode);
                 nm.ResetMarked();
                 nm.Search(this);
-            }
-                
+            }               
             Refresh();
         }
 
